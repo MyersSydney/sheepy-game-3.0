@@ -39,9 +39,14 @@ public class Wolf : MonoBehaviour
        
         if (!turnAround)
         {
+            if (bin.GetComponent<Bin>().numberrysOfSheep == 0)
+            {
+                turnAround = true;
+            }
+            
             transform.position = Vector2.MoveTowards(transform.position, bin.transform.position, moveSpeed * Time.deltaTime);
         }
-            if (turnAround)
+            else
             {
                 if (!hasSheep)
                 {
@@ -49,6 +54,7 @@ public class Wolf : MonoBehaviour
                     bin.GetComponent<Bin>().destroySheep();
 
                 }
+         
 
                 transform.position = Vector2.MoveTowards(transform.position, home.transform.position, moveSpeed * Time.deltaTime);
             }
@@ -60,13 +66,17 @@ public class Wolf : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-            if (collision.gameObject.tag == "wolf")
-            {
+        if (collision.gameObject.tag == "wolf")
+        {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
         }
-        if (transform.position == home.transform.position && turnAround)
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
+        if (collision.CompareTag("home") && turnAround)
         {
-            Destroy(collision.gameObject);
+            Destroy(gameObject);
             print("i died");
         }
 
