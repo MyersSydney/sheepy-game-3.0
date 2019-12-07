@@ -39,13 +39,13 @@ public class Bin : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Space) && numberrysOfSheep <= maxCap)
         {
-            sheepToSpawn = numberrysOfSheep * ;
+            sheepToSpawn = (int)((.25 * numberrysOfSheep) + 2);
         }
        
     }
     void AddSheep()
     {
-        for(int i = 0; i < Random.Range(1, sheepToSpawn * sheepToSpawn); i++){
+        for(int i = 0; i < Random.Range(1, sheepToSpawn); i++){
             if(numberrysOfSheep == maxCap)
             {
                 sheepToSpawn = 0;
