@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{D22B8647-4C15-C0CF-A246-59B4651124D0}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/playerMovement.cs">
+    <Files>
+      <File FileName="Assets/playerMovement.cs" Line="8" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
