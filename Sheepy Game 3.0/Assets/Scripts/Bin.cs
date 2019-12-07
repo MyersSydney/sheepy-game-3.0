@@ -77,8 +77,15 @@ public class Bin : MonoBehaviour
     }
     public void destroySheep()
     {
-        print("yum");
-        listOfSheepos.RemoveAt(0);
+        if (numberrysOfSheep > 0)
+        {
+            print("yum");
+            listOfSheepos.RemoveAt(0);
+        }
+        else
+        {
+            //no wolves
+        }
     }
 
 }
