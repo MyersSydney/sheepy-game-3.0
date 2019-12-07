@@ -16,7 +16,7 @@ public class Wolf : MonoBehaviour
 
   
 
-    public float moveSpeed = 1F;
+    public float moveSpeed = 25;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -25,6 +25,8 @@ public class Wolf : MonoBehaviour
 
     public bool turnAround = false;
     public bool hasSheep = false;
+
+    float timer = 0;
    
     private void Start()
     {
@@ -48,8 +50,9 @@ public class Wolf : MonoBehaviour
         }
             else
             {
-                if (!hasSheep)
+                if (!hasSheep && timer <= 0)
                 {
+                    timer = 3;
                     hasSheep = true;
                     bin.GetComponent<Bin>().destroySheep();
 
@@ -62,6 +65,7 @@ public class Wolf : MonoBehaviour
     }
     private void Update()
     {
+        timer = timer - Time.deltaTime;
         
     }
     private void OnCollisionEnter2D(Collision2D collision)
