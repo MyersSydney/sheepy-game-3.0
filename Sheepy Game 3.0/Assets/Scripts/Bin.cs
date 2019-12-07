@@ -16,12 +16,14 @@ public class Bin : MonoBehaviour
     [SerializeField]
     GameObject sheepos;
 
+    GameObject target;
+
     int maxMore = 4;
     int maxCap = 20;
 
     float timer = 0;
 
-
+    [SerializeField]
     List <GameObject> listOfSheepos;
 
     void Start()
@@ -80,12 +82,12 @@ public class Bin : MonoBehaviour
         if (numberrysOfSheep > 0)
         {
             print("yum");
+            GameObject tmp2 = listOfSheepos[0];
             listOfSheepos.RemoveAt(0);
+            numberrysOfSheep--;
+            Destroy(tmp2);
         }
-        else
-        {
-            //no wolves
-        }
+       
     }
 
 }
