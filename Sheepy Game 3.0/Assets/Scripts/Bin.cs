@@ -59,6 +59,14 @@ public class Bin : MonoBehaviour
 
 
         }
-        print(numberrysOfSheep);
+       
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag ("wolf")){
+            other.GetComponent<Wolf>().turnAround = true;
+            print("i work");
+        }
+    }
+
 }

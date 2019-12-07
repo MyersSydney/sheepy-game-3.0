@@ -21,7 +21,6 @@ public class playerMovement : MonoBehaviour
 
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
-        print(movement.sqrMagnitude);
         animator.SetFloat("speed", movement.sqrMagnitude);
 
         if (movement.x < 0)
@@ -32,10 +31,11 @@ public class playerMovement : MonoBehaviour
         {
             sr.flipX = false;
         }
-        Debug.Log(movement);
+       
     }
     void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
+
 }
