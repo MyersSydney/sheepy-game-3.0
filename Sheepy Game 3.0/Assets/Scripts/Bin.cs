@@ -5,7 +5,7 @@ using UnityEngine;
 public class Bin : MonoBehaviour
 {
     int sheepToSpawn = 0;
-    int numberrysOfSheep = 0;
+    public int numberrysOfSheep = 0;
 
     float x;
     float y;
@@ -22,8 +22,11 @@ public class Bin : MonoBehaviour
     float timer = 0;
 
 
+    List <GameObject> listOfSheepos;
+
     void Start()
     {
+        listOfSheepos = new List<GameObject>();
         sheepToSpawn = 2;
         x = spawnerPos.transform.position.x;
         y = spawnerPos.transform.position.y;
@@ -51,12 +54,14 @@ public class Bin : MonoBehaviour
                 sheepToSpawn = 0;
                 break;
             }
+            GameObject tmp = Instantiate(sheepos, new Vector2(Random.Range(spawnerPos.transform.position.x, spawnerPos.transform.position.x + maxMore), Random.Range(spawnerPos.transform.position.y, spawnerPos.transform.position.y - maxMore)), Quaternion.identity);
             //make sheep
-            Instantiate(sheepos, new Vector2(Random.Range(spawnerPos.transform.position.x, spawnerPos.transform.position.x + maxMore), Random.Range(spawnerPos.transform.position.y, spawnerPos.transform.position.y - maxMore)), Quaternion.identity);
+           listOfSheepos.Add(tmp);
 
             numberrysOfSheep++;
             sheepToSpawn--;
 
+            
 
         }
        
@@ -65,8 +70,15 @@ public class Bin : MonoBehaviour
     {
         if (other.CompareTag ("wolf")){
             other.GetComponent<Wolf>().turnAround = true;
-            print("i work");
+           
+
         }
+       
+    }
+    public void destroySheep()
+    {
+        print("yum");
+        listOfSheepos.RemoveAt(0);
     }
 
 }

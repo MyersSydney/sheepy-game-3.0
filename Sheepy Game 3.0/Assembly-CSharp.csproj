@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Bin.cs" />
     <Compile Include="Assets\Scripts\playerMovement.cs" />
+    <Compile Include="Assets\Scripts\PurePower.cs" />
     <Compile Include="Assets\Scripts\Wolf.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/myerssm02/Documents/GitHub/sheepy-game-3.0/Sheepy Game 3.0/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

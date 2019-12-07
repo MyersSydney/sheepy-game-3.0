@@ -22,7 +22,11 @@ public class Wolf : MonoBehaviour
 
     public bool turnAround = false;
     public bool hasSheep = false;
-
+    Bin b;
+    private void Start()
+    {
+        b = PurePower.instance.gameObject.GetComponent<Bin>();
+    }
 
     Vector2 movement;
     // Update is called once per frame
@@ -34,14 +38,17 @@ public class Wolf : MonoBehaviour
         }
         if (turnAround)
         {
-            hasSheep = true;
+            if (!hasSheep)
+            {
+                hasSheep = true;
+                b.destroySheep();
+               
+            }
+
             transform.position = Vector2.MoveTowards(transform.position, home.transform.position, moveSpeed * Time.deltaTime);
 
         }
-        if (hasSheep)
-        {
-
-        }
+        
     }
 }
   
