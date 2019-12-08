@@ -45,6 +45,7 @@ public class Bin : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space) && numberrysOfSheep <= maxCap)
         {
             sheepToSpawn = (int)((.25 * numberrysOfSheep) + 2);
+            
         }
        
     }

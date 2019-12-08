@@ -15,13 +15,13 @@ public class Spawners : MonoBehaviour
     int randomSpawnPoint;
     int randomWolf;
     public bool spawnAllowed;
+    int wolvesToSpawn;
     // Start is called before the first frame update
     void Start()
     {
         bin = PurePower.instance.gameObject;
         spawnAllowed = true;
-        InvokeRepeating("SpawnAWolf", 0f,1f);
-        
+        updateTheNumWolves();
     }
     private void Update()
     {
@@ -34,20 +34,26 @@ public class Spawners : MonoBehaviour
             spawnAllowed = true;
         }
     }
-    void SpawnAWolf()
+    public void SpawnAWolf()
     {
         if (spawnAllowed)
         {
-            randomSpawnPoint = Random.Range(0, spawners.Length);
-            randomWolf = Random.Range(0, wolves.Length);
+            
+            for (int i = 0; i < wolvesToSpawn; i++)
+            {
+                randomSpawnPoint = Random.Range(0, spawners.Length);
+                randomWolf = Random.Range(0, wolves.Length);
+                GameObject tmp = Instantiate(wolves[randomWolf], spawners[randomSpawnPoint].position, Quaternion.identity);
 
-           GameObject tmp = Instantiate(wolves[randomWolf], spawners[randomSpawnPoint].position, Quaternion.identity);
 
-           
-            tmp.GetComponent<Wolf>().home = spawners[randomSpawnPoint];
-
+                tmp.GetComponent<Wolf>().home = spawners[randomSpawnPoint];
+            }
             
         }  
         
+    }
+    public void updateTheNumWolves()
+    {
+        wolvesToSpawn = GameManager.instance.wave * GameManager.instance.wave + 3;
     }
 }
