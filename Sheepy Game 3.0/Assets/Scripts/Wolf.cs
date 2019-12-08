@@ -12,7 +12,7 @@ public class Wolf : MonoBehaviour
     GameObject bin;
 
     [SerializeField]
-    GameObject sheepFood;
+    GameObject sheepFood, MySheep;
 
   
 
@@ -54,7 +54,8 @@ public class Wolf : MonoBehaviour
                 {
                     timer = 3;
                     hasSheep = true;
-                    bin.GetComponent<Bin>().destroySheep();
+                    bin.GetComponent<Bin>().destroySheep(); 
+                
 
                 }
          
@@ -66,6 +67,11 @@ public class Wolf : MonoBehaviour
     private void Update()
     {
         timer = timer - Time.deltaTime;
+
+        if (hasSheep)
+        {
+            MySheep.SetActive(true);
+        }
         
     }
     private void OnCollisionEnter2D(Collision2D collision)

@@ -15,6 +15,7 @@ public class playerMovement : MonoBehaviour
 
     [SerializeField]
     GameObject weapon;
+    bool facingRight = true;
 
     // Update is called once per frame
     void Update()
@@ -26,15 +27,25 @@ public class playerMovement : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("speed", movement.sqrMagnitude);
 
-        if (movement.x < 0)
+        if (facingRight == false && movement.x > 0)
         {
-            sr.flipX = true;
-}
-        else
+            //sr.flipX = true;
+
+            Flip();
+        }
+        else if (movement.x < 0 && facingRight == true)
         {
-            sr.flipX = false;
+            //sr.flipX = false;
+            Flip();
         }
        
+    }
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 Scale = transform.localScale;
+        Scale.x *= -1;
+        transform.localScale = Scale;
     }
     void FixedUpdate()
     {
