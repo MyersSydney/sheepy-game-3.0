@@ -9,11 +9,14 @@ public class Sword : MonoBehaviour
 {
 
     [SerializeField]
+    GameObject bin;
+
+    [SerializeField]
     private TMP_Text text;
     // Start is called before the first frame update
     void Start()
     {
-
+        bin = PurePower.instance.gameObject;
     }
 
     // Update is called once per frame
@@ -38,7 +41,8 @@ public class Sword : MonoBehaviour
             {
                 text.gameObject.SetActive(true);
                 print("greetings uncivilized man");
-            }
+                bin.GetComponent<Bin>().destroySheep();
+        }
 
         }
     private void OnTriggerExit2D(Collider2D collision)
