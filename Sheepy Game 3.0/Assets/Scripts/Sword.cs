@@ -40,11 +40,22 @@ public class Sword : MonoBehaviour
             if (collision.CompareTag("shady"))
             {
                 text.gameObject.SetActive(true);
-                print("greetings uncivilized man");
-                bin.GetComponent<Bin>().destroySheep();
+                GetComponent<CameraShaker>().Appeased = true;
+                text.SetText("Greetings uncivilized man... thank you for the sheep");
+                 bin.GetComponent<Bin>().destroySheep();
         }
 
         }
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.CompareTag("animal"))
+        {
+            text.gameObject.SetActive(true);
+            text.SetText("Please appease our god...");
+          
+
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         text.gameObject.SetActive(false);

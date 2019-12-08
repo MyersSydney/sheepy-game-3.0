@@ -8,6 +8,7 @@ TagManager:
   - home
   - sword
   - shady
+  - animal
   layers:
   - Default
   - TransparentFX
@@ -44,4 +45,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GroundStuffz
+    uniqueID: 1097848931
+    locked: 0
+  - name: OrnamentsPlayerThings
+    uniqueID: 3103989175
     locked: 0
