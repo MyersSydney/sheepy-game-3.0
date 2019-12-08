@@ -6,6 +6,7 @@ TagManager:
   tags:
   - wolf
   - home
+  - sword
   layers:
   - Default
   - TransparentFX

@@ -13,6 +13,9 @@ public class playerMovement : MonoBehaviour
 
     Vector2 movement;
 
+    [SerializeField]
+    GameObject weapon;
+
     // Update is called once per frame
     void Update()
     {
@@ -43,7 +46,9 @@ public class playerMovement : MonoBehaviour
         if (collision.gameObject.tag == "wolf")
         {
             Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-        }
 
+           
+        }
+       
     }
     }

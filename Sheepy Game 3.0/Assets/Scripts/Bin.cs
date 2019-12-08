@@ -49,26 +49,37 @@ public class Bin : MonoBehaviour
         }
        
     }
-    void AddSheep()
+    public void AddSheep(int n = -1)
     {
-        for(int i = 0; i < Random.Range(1, sheepToSpawn); i++){
-            if(numberrysOfSheep == maxCap)
+        if (n <= 0)
+        {
+            for (int i = 0; i < Random.Range(1, sheepToSpawn); i++)
             {
-                sheepToSpawn = 0;
-                break;
+                if (numberrysOfSheep == maxCap)
+                {
+                    sheepToSpawn = 0;
+                    break;
+                }
+                GameObject tmp = Instantiate(sheepos, new Vector2(Random.Range(spawnerPos.transform.position.x, spawnerPos.transform.position.x + maxMore), Random.Range(spawnerPos.transform.position.y, spawnerPos.transform.position.y - maxMore)), Quaternion.identity);
+                //make sheep
+                listOfSheepos.Add(tmp);
+
+                numberrysOfSheep++;
+                sheepToSpawn--;
             }
+        }
+        
+        else
+        {
             GameObject tmp = Instantiate(sheepos, new Vector2(Random.Range(spawnerPos.transform.position.x, spawnerPos.transform.position.x + maxMore), Random.Range(spawnerPos.transform.position.y, spawnerPos.transform.position.y - maxMore)), Quaternion.identity);
             //make sheep
-           listOfSheepos.Add(tmp);
-
+            listOfSheepos.Add(tmp);
             numberrysOfSheep++;
-            sheepToSpawn--;
-
-            
-
+        }
+        
         }
        
-    }
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag ("wolf")){

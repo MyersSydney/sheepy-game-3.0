@@ -77,13 +77,12 @@ public class Wolf : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+
         if (collision.CompareTag("home") && turnAround)
         {
             Destroy(gameObject);
             print("i died");
         }
-
     }
 
 }
