@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Scenes/TitleScreen.unity
     guid: 1fda3cd6d96e94146a0e9ec356d463e0
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/TheMap.unity
+    guid: 1126fcd874589f64b8de914a3cb2aabc
   - enabled: 1
     path: Assets/Scenes/Game Over.unity
     guid: 8111bf29068890b4cb5b4692a28ea2eb
