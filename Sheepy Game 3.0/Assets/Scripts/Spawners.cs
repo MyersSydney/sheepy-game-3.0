@@ -16,6 +16,8 @@ public class Spawners : MonoBehaviour
     int randomWolf;
     public bool spawnAllowed;
     int wolvesToSpawn;
+
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +27,7 @@ public class Spawners : MonoBehaviour
     }
     private void Update()
     {
+        
         if (bin.GetComponent<Bin>().numberrysOfSheep <= 0)
         {
             spawnAllowed = false;
@@ -38,22 +41,21 @@ public class Spawners : MonoBehaviour
     {
         if (spawnAllowed)
         {
-            
             for (int i = 0; i < wolvesToSpawn; i++)
             {
-                randomSpawnPoint = Random.Range(0, spawners.Length);
-                randomWolf = Random.Range(0, wolves.Length);
-                GameObject tmp = Instantiate(wolves[randomWolf], spawners[randomSpawnPoint].position, Quaternion.identity);
+                    randomSpawnPoint = Random.Range(0, spawners.Length);
+                    randomWolf = Random.Range(0, wolves.Length);
+                    GameObject tmp = Instantiate(wolves[randomWolf], spawners[randomSpawnPoint].position, Quaternion.identity);
 
-
-                tmp.GetComponent<Wolf>().home = spawners[randomSpawnPoint];
-            }
-            
+                    tmp.GetComponent<Wolf>().home = spawners[randomSpawnPoint];
+                
+            } 
         }  
         
     }
     public void updateTheNumWolves()
     {
-        wolvesToSpawn = GameManager.instance.wave * GameManager.instance.wave + 3;
+            bin.GetComponent<Bin>().nextRound = true;
+            wolvesToSpawn = GameManager.instance.wave * GameManager.instance.wave + 1;
     }
 }

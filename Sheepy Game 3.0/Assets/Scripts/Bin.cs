@@ -23,6 +23,8 @@ public class Bin : MonoBehaviour
 
     float timer = 0;
 
+    public bool nextRound = false;
+
     [SerializeField]
     List <GameObject> listOfSheepos;
 
@@ -42,10 +44,10 @@ public class Bin : MonoBehaviour
         {
             AddSheep();
         }
-        if(Input.GetKeyDown(KeyCode.Space) && numberrysOfSheep <= maxCap)
+        if(nextRound == true)
         {
             sheepToSpawn = (int)((.25 * numberrysOfSheep) + 2);
-            
+            nextRound = false;
         }
        
     }
