@@ -1,28 +1,43 @@
 fileFormatVersion: 2
-guid: ea7ebc87dfe22854bb74c8908e3639d3
+guid: e39da6d2b8b1cb845961448bf13a7391
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2673551865362153074
-    second: wolfWalkSprites_0
+      213: -8858599590500408625
+    second: PlayerBackwardWalk_0
   - first:
-      213: -7865209959479724897
-    second: wolfWalkSprites_1
+      213: 3263151880890242580
+    second: PlayerBackwardWalk_1
   - first:
-      213: -8573624297926064813
-    second: wolfWalkSprites_2
+      213: 7232544652402085942
+    second: PlayerBackwardWalk_2
   - first:
-      213: 7823310619349287459
-    second: wolfWalkSprites_3
+      213: -4292375281248354612
+    second: PlayerBackwardWalk_3
   - first:
-      213: -7046593473194910307
-    second: wolfWalkSprites_4
+      213: 4299264179169877777
+    second: PlayerBackwardWalk_4
   - first:
-      213: -6977047288134585577
-    second: wolfWalkSprites_5
+      213: -3291439963930156043
+    second: PlayerBackwardWalk_5
   - first:
-      213: -232373714718388005
-    second: wolfWalkSprites_6
+      213: 8795515540517498921
+    second: PlayerBackwardWalk_6
+  - first:
+      213: 1461725774754048252
+    second: PlayerBackwardWalk_7
+  - first:
+      213: 2835739627849880577
+    second: PlayerBackwardWalk_8
+  - first:
+      213: -5767554765524595634
+    second: PlayerBackwardWalk_9
+  - first:
+      213: -3294919783338125851
+    second: PlayerBackwardWalk_10
+  - first:
+      213: -8996788202380145255
+    second: PlayerBackwardWalk_11
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -179,148 +194,253 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wolfWalkSprites_0
+      name: PlayerBackwardWalk_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 3
-        width: 1367
-        height: 1496
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        y: 430
+        width: 155
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c4b53b1faa49424eb100de48e00de1f
-      internalID: -2673551865362153074
+      spriteID: 289e740607030ee4f9c8cbc6f243b7b6
+      internalID: -8858599590500408625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wolfWalkSprites_1
+      name: PlayerBackwardWalk_1
       rect:
         serializedVersion: 2
-        x: 1638
-        y: 13
-        width: 1375
-        height: 1471
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 661c783831a515e4c8ef894434156db8
-      internalID: -7865209959479724897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wolfWalkSprites_2
-      rect:
-        serializedVersion: 2
-        x: 3088
-        y: 13
-        width: 1375
-        height: 1476
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 660be68996db90a4db4dd41a52c3b075
-      internalID: -8573624297926064813
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wolfWalkSprites_3
-      rect:
-        serializedVersion: 2
-        x: 4581
-        y: 13
-        width: 1372
-        height: 1476
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f75a6172f95f9184996ac97bcf09bff4
-      internalID: 7823310619349287459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wolfWalkSprites_4
-      rect:
-        serializedVersion: 2
-        x: 5997
-        y: 18
-        width: 1406
-        height: 1465
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 65f84310e9d005241832748212eb2240
-      internalID: -7046593473194910307
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: wolfWalkSprites_5
-      rect:
-        serializedVersion: 2
-        x: 7419
+        x: 0
         y: 0
-        width: 1439
-        height: 1502
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        width: 1101
+        height: 1394
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6695d8021d0b984cb1845ae461ff9ef
-      internalID: -6977047288134585577
+      spriteID: a7d9548c90370984fbff81d857f66d8f
+      internalID: 3263151880890242580
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: wolfWalkSprites_6
+      name: PlayerBackwardWalk_2
       rect:
         serializedVersion: 2
-        x: 8909
-        y: 3
-        width: 1367
-        height: 1496
-      alignment: 2
-      pivot: {x: 0.5, y: 1}
+        x: 950
+        y: 376
+        width: 147
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5d762606da6da545b20944f6a5c2b02
-      internalID: -232373714718388005
+      spriteID: 9f97df1fd0589964cb508d47f2e74f47
+      internalID: 7232544652402085942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_3
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 0
+        width: 1057
+        height: 1394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad9161689ecf0cc4aa4684682281d397
+      internalID: -4292375281248354612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_4
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 461
+        width: 147
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db368f688843ce2448b384f09fc2e95b
+      internalID: 4299264179169877777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_5
+      rect:
+        serializedVersion: 2
+        x: 2537
+        y: 404
+        width: 159
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48d975aa2e4bf9d41b181a7ea47ef91f
+      internalID: -3291439963930156043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_6
+      rect:
+        serializedVersion: 2
+        x: 2538
+        y: 0
+        width: 1103
+        height: 1394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7a86434a3d3ab48a5059c0898be86e
+      internalID: 8795515540517498921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_7
+      rect:
+        serializedVersion: 2
+        x: 3494
+        y: 423
+        width: 147
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1e617959e32c043a91061df3e32770
+      internalID: 1461725774754048252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_8
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 504
+        width: 159
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b992ff8aa33b174cabbe4ac034576a0
+      internalID: 2835739627849880577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_9
+      rect:
+        serializedVersion: 2
+        x: 3750
+        y: 0
+        width: 1109
+        height: 1394
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6fb7dc1714b7b540b03e8a6399ca329
+      internalID: -5767554765524595634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_10
+      rect:
+        serializedVersion: 2
+        x: 4713
+        y: 314
+        width: 146
+        height: 258
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f27d9f741e0184041ada1a0a43c1a398
+      internalID: -3294919783338125851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerBackwardWalk_11
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 326
+        width: 159
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 336d723738a4c6d4d8d72bb87ae862b5
+      internalID: -8996788202380145255
       vertices: []
       indices: 
       edges: []

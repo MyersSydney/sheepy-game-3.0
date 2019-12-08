@@ -20,7 +20,7 @@ public class Sword : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        print(collision);
         if (collision.CompareTag("wolf"))
         {
             if (collision.gameObject.GetComponent<Wolf>().hasSheep)
