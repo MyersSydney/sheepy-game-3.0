@@ -39,16 +39,23 @@ public class Spawners : MonoBehaviour
     }
     public void SpawnAWolf()
     {
+       
         if (spawnAllowed)
         {
             for (int i = 0; i < wolvesToSpawn; i++)
             {
-                    randomSpawnPoint = Random.Range(0, spawners.Length);
-                    randomWolf = Random.Range(0, wolves.Length);
-                    GameObject tmp = Instantiate(wolves[randomWolf], spawners[randomSpawnPoint].position, Quaternion.identity);
+                randomSpawnPoint = Random.Range(0, spawners.Length);
+                randomWolf = Random.Range(0, wolves.Length);
 
-                    tmp.GetComponent<Wolf>().home = spawners[randomSpawnPoint];
-                
+                Collider2D[] check = Physics2D.OverlapCircleAll(spawners[randomSpawnPoint].position, 2);
+                if (check.Length == 1) { 
+                GameObject tmp = Instantiate(wolves[randomWolf], spawners[randomSpawnPoint].position, Quaternion.identity);
+
+                tmp.GetComponent<Wolf>().home = spawners[randomSpawnPoint];
+            } else
+                {
+                    print("Cant spawn");
+                }
             } 
         }  
         

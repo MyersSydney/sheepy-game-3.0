@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     float timer = 30;
     [SerializeField]
-    bool inGame = false;
+    public bool inGame = false;
     private void Awake()
     {
         MakeSingleton();
@@ -51,6 +51,10 @@ public class GameManager : MonoBehaviour
             text.SetText("Wave:{0}", wave);
 
 
+    }
+    public void GameOver()
+    {
+        Debug.Log("gameover");
     }
         }
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Bin : MonoBehaviour
 {
@@ -49,6 +50,7 @@ public class Bin : MonoBehaviour
             sheepToSpawn = (int)((.25 * numberrysOfSheep) + 2);
             nextRound = false;
         }
+        lose();
        
     }
     public void AddSheep(int n = -1)
@@ -101,7 +103,15 @@ public class Bin : MonoBehaviour
             numberrysOfSheep--;
             Destroy(tmp2);
         }
+        
        
+    }
+    public void lose()
+    {
+        if(numberrysOfSheep <= 0)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
     }
 
 }
