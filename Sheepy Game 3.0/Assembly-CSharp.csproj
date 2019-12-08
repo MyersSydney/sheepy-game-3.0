@@ -71,6 +71,7 @@
     <Compile Include="Assets\Scripts\Spawners.cs" />
     <Compile Include="Assets\Scripts\Sword.cs" />
     <Compile Include="Assets\Scripts\ThisTheSpawner.cs" />
+    <Compile Include="Assets\Scripts\WaveManager.cs" />
     <Compile Include="Assets\Scripts\Wolf.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />

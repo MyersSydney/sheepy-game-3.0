@@ -106,11 +106,12 @@ public class Bin : MonoBehaviour
         
        
     }
-    public void lose()
+   void lose()
     {
         if(numberrysOfSheep <= 0)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            FindObjectOfType<GameManager>().GameOver();
+
         }
     }
 

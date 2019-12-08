@@ -3478,7 +3478,6 @@ MonoBehaviour:
   score: 0
   endGame: 0
   wave: 0
-  text: {fileID: 1763203337}
   timer: 0
   inGame: 0
 --- !u!4 &1027827551
@@ -5792,6 +5791,7 @@ GameObject:
   - component: {fileID: 1763203336}
   - component: {fileID: 1763203338}
   - component: {fileID: 1763203337}
+  - component: {fileID: 1763203339}
   m_Layer: 5
   m_Name: WaveText
   m_TagString: Untagged
@@ -5938,6 +5938,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1763203335}
   m_CullTransparentMesh: 0
+--- !u!114 &1763203339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763203335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b39abce338df59343b4b4488f152ad2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 1763203337}
+  timer: 30
 --- !u!1001 &1779345695
 PrefabInstance:
   m_ObjectHideFlags: 0
