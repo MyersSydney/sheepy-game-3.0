@@ -7,6 +7,7 @@ TagManager:
   - wolf
   - home
   - sword
+  - shady
   layers:
   - Default
   - TransparentFX

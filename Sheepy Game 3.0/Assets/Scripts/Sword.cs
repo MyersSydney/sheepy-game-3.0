@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using static PurePower;
+using TMPro;
 
 
 public class Sword : MonoBehaviour
 {
- 
+
+    [SerializeField]
+    private TMP_Text text;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -20,7 +23,7 @@ public class Sword : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        print(collision);
+
         if (collision.CompareTag("wolf"))
         {
             if (collision.gameObject.GetComponent<Wolf>().hasSheep)
@@ -29,8 +32,18 @@ public class Sword : MonoBehaviour
             }
             Destroy(collision.gameObject);
             print("you killed me... how dare you");
-
         }
 
+            if (collision.CompareTag("shady"))
+            {
+                text.gameObject.SetActive(true);
+                print("greetings uncivilized man");
+            }
+
+        }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        text.gameObject.SetActive(false);
     }
+
 }

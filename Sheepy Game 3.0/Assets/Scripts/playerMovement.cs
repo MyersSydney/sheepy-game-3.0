@@ -56,10 +56,10 @@ public class playerMovement : MonoBehaviour
     {
         if (collision.gameObject.tag == "wolf")
         {
-            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());
-
-           
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), GetComponent<Collider2D>());  
         }
-       
+
     }
-    }
+   
+    
+}
